@@ -1,113 +1,266 @@
-import Image from 'next/image'
-
+import Image from "next/image";
+import "./globals.css";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <div className="landing-header">
+        <div className="flex flex-col justify-center h-full items-center">
+          <span className="text-4xl md:text-7xl text-white font-extrabold drop-shadow-md md:leading-tight pb-5">
+            GOLF IN ZYNCS <br /> ACADEMY
+          </span>
+          <span className="text-white text-center">
+          &quot;เราคือสถาบันกอล์ฟที่มีเทคโนโลยีเครื่องมือครบคัน สอนโดย TPI
+            Certified Coach&quot;
+          </span>
         </div>
       </div>
+      <div className="bg-black  p-10">
+        <div className="flex flex-col items-center">
+          <span className="text-white text-4xl pb-20">
+            SPECIAL OFFER <span className="text-[#c7a84a]">PRICELIST</span>
+          </span>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+          <div className="md:space-y-0 md:flex md:gap-x-7  space-y-14">
+            <div className="relative">
+              <div
+                className="absolute z-10 inset-x-1/2 rounded-full h-28 w-28 -translate-x-1/2  -top-12 flex flex-col justify-center align-middle"
+                style={{
+                  background: "linear-gradient(to bottom, #c7a84a, #7e6b30)",
+                }}
+              >
+                <div className="flex justify-center  items-end">
+                  <span className=" text-5xl mr-1 font-bold">3</span>
+                  <span className="align-bottom">ครั้ง</span>
+                </div>
+                <div className="flex justify-center">
+                  <div className="text-[10px] text-white">
+                    1 ครั้ง = 1 ชั่วโมง
+                  </div>
+                </div>
+              </div>
+              <Card sx={{ maxWidth: 345 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image="/pricelist1.png"
+                    alt="pricelist1"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h4"
+                      component="div"
+                      className="text-[#a3893c] font-extrabold"
+                    >
+                      Mini Course
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      เด็ก{" "}
+                      <Typography
+                        variant="subtitle2"
+                        component="span"
+                        sx={{ fontSize: "0.8rem" }}
+                      >
+                        อายุไม่เกิน 15 ปี
+                      </Typography>
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="text.secondary"
+                      className="pb-2 font-bold"
+                    >
+                      ราคา: 5,700 บาท
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      ผู้ใหญ่{" "}
+                      <Typography
+                        variant="subtitle2"
+                        component="span"
+                        sx={{ fontSize: "0.8rem" }}
+                      >
+                        อายุ 15 ปีขึ้นไป
+                      </Typography>
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="text.secondary"
+                      className="pb-2 font-bold"
+                    >
+                      ราคา: 6,600 บาท
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </div>
+            <div className="relative">
+              <div
+                className="absolute z-10 inset-x-1/2 rounded-full h-28 w-28 -translate-x-1/2  -top-12 flex flex-col justify-center align-middle"
+                style={{
+                  background: "linear-gradient(to bottom, #c7a84a, #7e6b30)",
+                }}
+              >
+                <div className="flex justify-center  items-end">
+                  <span className=" text-5xl mr-1 font-bold">5</span>
+                  <span className="align-bottom">ครั้ง</span>
+                </div>
+                <div className="flex justify-center">
+                  <div className="text-[10px] text-white">
+                    1 ครั้ง = 1 ชั่วโมง
+                  </div>
+                </div>
+              </div>
+              <Card sx={{ maxWidth: 345 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image="/pricelist2.png"
+                    alt="pricelist2"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h4"
+                      component="div"
+                      className=" font-extrabold text-[#a3893c]"
+                    >
+                      Medium Course
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      เด็ก{" "}
+                      <Typography
+                        variant="subtitle2"
+                        component="span"
+                        sx={{ fontSize: "0.8rem" }}
+                      >
+                        อายุไม่เกิน 15 ปี
+                      </Typography>
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="text.secondary"
+                      className="pb-2 font-bold"
+                    >
+                      ราคา: 8,500 บาท
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      ผู้ใหญ่{" "}
+                      <Typography
+                        variant="subtitle2"
+                        component="span"
+                        sx={{ fontSize: "0.8rem" }}
+                      >
+                        อายุ 15 ปีขึ้นไป
+                      </Typography>
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="text.secondary"
+                      className="pb-2 font-bold"
+                    >
+                      ราคา: 10,000 บาท
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </div>
+            <div className="relative">
+              <div
+                className="absolute z-10 inset-x-1/2 rounded-full h-28 w-28  -translate-x-1/2  -top-12 flex flex-col justify-center align-middle"
+                style={{
+                  background: "linear-gradient(to bottom, #c7a84a, #7e6b30)",
+                }}
+              >
+                <div className="flex justify-center  items-end">
+                  <span className=" text-5xl mr-1 font-bold">10</span>
+                  <span className="align-bottom">ครั้ง</span>
+                </div>
+                <div className="flex justify-center">
+                  <div className="text-[10px] text-white">
+                    1 ครั้ง = 1 ชั่วโมง
+                  </div>
+                </div>
+              </div>
+              <Card sx={{ maxWidth: 345 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image="/pricelist3.png"
+                    alt="pricelist2"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h4"
+                      component="div"
+                      className=" font-extrabold text-[#a3893c]"
+                    >
+                      Mega Course
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      เด็ก{" "}
+                      <Typography
+                        variant="subtitle2"
+                        component="span"
+                        sx={{ fontSize: "0.8rem" }}
+                      >
+                        อายุไม่เกิน 15 ปี
+                      </Typography>
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="text.secondary"
+                      className="pb-2 font-bold "
+                    >
+                      ราคา: 15,000 บาท
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      ผู้ใหญ่{" "}
+                      <Typography
+                        variant="subtitle2"
+                        component="span"
+                        sx={{ fontSize: "0.8rem" }}
+                      >
+                        อายุ 15 ปีขึ้นไป
+                      </Typography>
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="text.secondary"
+                      className="pb-2 font-bold"
+                    >
+                      ราคา: 18,000 บาท
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="bg-black smoke-background p-10">
+        <div className="flex flex-col items-center">
+          <span className="text-white text-4xl pb-10">
+            IMPROVE SWINGS WITH{" "}
+            <span className="text-[#c7a84a]">TECHNOLOGY</span>
+          </span>
+          <span className="text-white  lg:w-2/4 pb-3">ทางสถาบัน GOLF IN ZYNCS ACADEMY ได้นำเทคโนโลยีมาช่วยให้วงสวิงถูกต้อง และ เข้าใจง่ายมากขึ้นด้วยเครื่องมือต่างๆเช่น Trackman, Smart2move, และ Swing Catalyst ซึ่งเป็นที่ยอมรับทั่วโลก วิเคราะห์ละเอียดโดยผู้เชี่ยวชาญทำให้มั่นใจได้ว่า วงสวิงได้ถูกสอนหรือแก้ไขอย่างถูกต้อง</span>
+          <Image
+          className="pt-2"
+            src="/technology.png" // Provide the path to your image relative to the public directory
+            alt="technology"
+            width="800" // Set the width (adjust as needed)
+            height="800" // Set the height (adjust as needed)
+          />
+        </div>
       </div>
-    </main>
-  )
+    </div>
+  );
 }

@@ -2,7 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+
+
+.landing-header{
+  background:  linear-gradient(to right top, #0a0a0a, rgba(10, 10, 10, 0) 64%),
+  url('../../public/pic1.png') center/cover no-repeat;
+  background-size: fill, cover;
+  background-repeat: no-repeat;
+  height: 65vh;
+  min-height: 33rem
+}
+
+.smoke-background{
+  background: url('../../public/18775341_6004799.svg')center/cover no-repeat;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +39,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
